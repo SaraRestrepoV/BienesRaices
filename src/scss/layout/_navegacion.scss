@@ -4,6 +4,7 @@
 .barra {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding-top: 3rem;
 
     @include m.tablet {
@@ -13,6 +14,8 @@
 }
 
 .navegacion {
+    display: none;
+
     @include m.tablet {
         display: flex;
         align-items: center;
@@ -35,3 +38,17 @@
         }
     }
 }
+
+/** Menú hamburguesa **/
+
+.mobile-menu {
+    @include m.tablet {
+        display: none;
+    }
+
+    img {
+        margin-top: 1rem;
+        width: 4rem;
+    }
+}
+
