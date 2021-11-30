@@ -10,4 +10,5 @@ function eventListeners() {
 
 function navegacionResponsive() {
     console.log("Desde navegación responsive");
+
 }
