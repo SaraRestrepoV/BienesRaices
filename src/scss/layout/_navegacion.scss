@@ -43,7 +43,8 @@
 .navegacion {
     visibility: hidden;
     opacity: 0;
-    transition: visibility .3s ease-in-out, opacity 0.5s linear;
+    height: 0;
+    transition: visibility .3s ease-in-out, opacity .5s linear, height .5s linear;
 
     @include m.tablet {
         display: flex;
@@ -86,6 +87,9 @@
 .mostrar {
     display: block;
     flex-direction: column;
+    visibility: visible;
+    opacity: 1;
+    height: auto;
 
     @include m.tablet {
         flex-direction: row;
