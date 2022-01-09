@@ -5,21 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link rel="stylesheet" href="build/css/app.css">
+    <link rel="stylesheet" href="/build/css/app.css">
 </head>
 <body>
-    <header class="header <?php echo isset( $inicio ) ? 'inicio' : ''?>">
+    <header class="header <?php echo $inicio ? 'inicio' : ''?>">
         <div class="contenedor contenido-header">
             <div class="barra">
                 <a href="index.php">
-                    <img class="logo-header" src="build/img/logo.svg" alt="Logotipo de bienes raíces">
+                    <img class="logo-header" src="../../build/img/logo.svg" alt="Logotipo de bienes raíces">
                 </a>
                 <div class="mobile-menu">
-                    <img src="build/img/barras.svg" alt="Icono menú para dispositivos móviles">
+                    <img src="../../build/img/barras.svg" alt="Icono menú para dispositivos móviles">
                 </div>
 
                 <div class="derecha">
-                    <img class="dark-mode-boton" src="build/img/dark-mode.svg" alt="Modo oscuro">
+                    <img class="dark-mode-boton" src="../../build/img/dark-mode.svg" alt="Modo oscuro">
                     <nav class="navegacion">
                         <a href="nosotros.php">Nosotros</a>
                         <a href="anuncios.php">Anuncios</a>
@@ -30,6 +30,6 @@
                 
                 
             </div> <!--Cierre de la barra-->
-            <?php echo isset($inicio) ? '<h2>Venta de Casas y Departamentos Exclusivos de Lujo</h2>' : ''; ?>
+            <?php echo $inicio ? '<h2>Venta de Casas y Departamentos Exclusivos de Lujo</h2>' : ''; ?>
         </div>
     </header>
