@@ -2,8 +2,12 @@
 
 ## Este proyecto se encuentra en proceso de creación... 💻
 - Adaptable a diferentes dispositivos
-- Este proyecto contiene Dark Mode
-- Toggle button 
+- Dark mode que se ajusta a las preferencias de isuario
+- Toggle button
+- Base de datos
+- Autenticación de usuarios
+- Backend hecho con PHP
+- Uso de Gulp y SASS 
 
 ![image](https://user-images.githubusercontent.com/89092194/143274182-308491a7-a1ad-4ab8-8c20-52be206d5892.png)
 
