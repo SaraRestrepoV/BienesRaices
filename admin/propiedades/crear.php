@@ -66,9 +66,9 @@
             $errores[] = "La imagen es obligatoria";
         }
 
-        //Validar por tamaño (100kb máximo)
+        //Validar por tamaño (100mb máximo)
 
-        $medida = 1000 * 100;
+        $medida = 1000 * 1000;
 
         if($imagen['size'] > $medida) {
             $errores[] = "La imagen es muy pesada";
@@ -80,16 +80,16 @@
             /**SUBIDA DE ARCHIVOS */
 
             //Crear carpeta
-            $carpetaImagenes = '../../imagenes';
-            if(is_dir($carpetaImagenes)) {
-            mkdir($carpetaImagenes);
+            $carpetaImagenes = '../../imagenes/';
+            if(!is_dir($carpetaImagenes)) {
+                mkdir($carpetaImagenes);
             }
 
             //Generar un nombre único
-            $nombreImagen = md5(uniqid(rand(), true) . "jpg");
+            $nombreImagen = md5( uniqid( rand(), true ));
 
             //Subir la imagen
-            move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . $nombreImagen);
+            move_uploaded_file($imagen['tmp_name'], $carpetaImagenes .  $nombreImagen . ".jpg");
 
             //Insertar en la base de datos
 

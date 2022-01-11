@@ -1,16 +1,46 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
 .alerta {
     padding: .5rem;
     text-align: center;
-    color: white;
-    font-weight: 700;
+    color: v.$blanco;
+    font-weight: v.$bold;
     text-transform: uppercase;
     margin: 1rem 0;
 
     &.error {
-        background-color: rgb(128, 5, 5);
+        background-color: v.$rojo;
     }
 
     &.exito {
-        background-color: #71B100;
+        background-color: v.$verde;
+    }
+}
+
+table.propiedades {
+    margin-top: 4rem;
+    width: 100%;
+    border-spacing: 0;
+
+    thead {
+        background-color: v.$verde;
+
+        th {
+            color: v.$blanco;
+            padding: 2rem;
+        }
+    }
+
+    tbody {
+        tr td {
+            background-color: v.$blanco;
+            font-family: v.$fuente_principal;
+            font-weight: v.$bold;
+        }
+    }
+
+    .imagen-tabla {
+        width: 10rem;
     }
 }
