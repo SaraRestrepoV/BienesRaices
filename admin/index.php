@@ -1,6 +1,8 @@
 <?php
 
     //Importar la conexión
+    require '../../includes/config/database.php';
+    $db = conectarDB();
 
     //Escribit el Query
 
@@ -34,11 +36,11 @@
                     <th>Acciones</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody> <!--Mostrar los resultados-->
                 <tr>
                     <td>1</td>
                     <td>Casa en la playa</td>
-                    <td><img src="/imagenes/ " class="imagen-tabla"></td>
+                    <td><img src="/build/img/anuncio1.jpg" class="imagen-tabla"></td>
                     <td>$120000000</td>
                     <td>
                         <a href="#" class="boton-rojo-block">Eliminar</a>
@@ -50,5 +52,6 @@
     </main>
 
 <?php 
+    //Cerrar la conexión
     incluirTemplate('footer');
 ?>
