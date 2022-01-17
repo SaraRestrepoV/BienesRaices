@@ -71,9 +71,7 @@
         if (!$vendedorId) {
             $errores[] = "Elige un vendedor";
         };
-        if(!$imagen['name'] || $imagen['error']) {
-            $errores[] = "La imagen es obligatoria";
-        }
+
 
         //Validar por tamaño (100mb máximo)
 
@@ -102,8 +100,7 @@
 
             //Insertar en la base de datos
 
-            $query = "INSERT INTO propiedades (titulo, precio, imagen, descripcion, habitaciones, wc, estacionamiento, creado, vendedorId)
-            VALUES ( '$titulo', '$precio', '$nombreImagen', '$descripcion', '$habitaciones', '$wc', '$estacionamiento', '$creado', '$vendedorId' )";
+            $query = "UPDATE propiedades SET titulo = '${titulo}', SET precio = '${precio}', SET descripcion = '${desccipcion}', SET habitaciones = ${habitaciones}, SET wc = ${wc}, SET estacionamiento = ${estacionamiento}, SET vendedorId = ${vendedorId}       WHERE id = {id}";
 
             $resultado = mysqli_query($db, $query);
 
@@ -131,7 +128,7 @@
         </div>
         <?php endforeach; ?>
 
-        <form class="formulario" method="POST" action="/admin/propiedades/crear.php" enctype="multipart/form-data">
+        <form class="formulario" method="POST" enctype="multipart/form-data">
             <fieldset>
                 <legend>Información General</legend>
 
@@ -144,7 +141,7 @@
                 <label for="imagen">Imagen:</label>
                 <input type="file" id="imagen" accept="image/jpej, image/png, image/jpg" name="imagen">
 
-                <img src="/imagenes/<?php echo $imagenPropiedad; ?>" class="" alt="Imagen propiedad">
+                <img src="/imagenes/<?php echo $imagenPropiedad; ?>" class="imagen-small" alt="Imagen propiedad">
 
                 <label for="descripcion">Descripción:</label>
                 <textarea id="descripcion" name="descripcion"><?php echo $descripcion;?></textarea>
