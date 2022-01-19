@@ -2,7 +2,7 @@
 
 ## Este proyecto se encuentra en proceso de creación... 💻
 - Adaptable a diferentes dispositivos
-- Dark mode que se ajusta a las preferencias de isuario
+- Dark mode que se ajusta a las preferencias de usuario
 - Conexión con base de datos
 - Autenticación de usuarios
 - Backend hecho con PHP
