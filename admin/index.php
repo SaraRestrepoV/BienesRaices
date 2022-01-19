@@ -31,7 +31,7 @@
             $resultado = mysqli_query($db, $query);
 
             if($resultado) {
-                header('location: /admin');
+                header('location: /admin?resultado=3');
             }
         }
     }
@@ -48,6 +48,8 @@
             <p class="alerta exito">Anuncio Creado Correctamente</p>
         <?php elseif(intval($resultado) === 2): ?>
             <p class="alerta exito">Anuncio Actualizado Correctamente</p>
+        <?php elseif(intval($resultado) === 3): ?>
+            <p class="alerta exito">Anuncio Eliminado Correctamente</p>
         <?php endif; ?>
 
         <a href="/admin/propiedades/crear.php" class="boton boton-verde">Nueva propiedad</a>
