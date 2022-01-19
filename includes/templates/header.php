@@ -30,6 +30,11 @@
                 
                 
             </div> <!--Cierre de la barra-->
-            <?php echo $inicio ? '<h2>Venta de Casas y Departamentos Exclusivos de Lujo</h2>' : ''; ?>
+            <?php
+            if($inicio) {
+                echo "<h1>Venta de Casas y Apartamentos Exclusivos de Lujo</h1>";
+            }
+            
+            ?>
         </div>
     </header>
