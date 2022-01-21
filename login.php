@@ -22,6 +22,7 @@
             $resultado = mysqli_query($db, $query);
 
             if ($resultado->num_rows) {
+                //Revisar si el password es correcto
 
             } else {
                 $errores[] = "El usuario no existe";
