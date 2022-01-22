@@ -23,7 +23,23 @@
 
             if ($resultado->num_rows) {
                 //Revisar si el password es correcto
+                $usuario = mysqli_fetch_assoc($resultado);
 
+                //Verificar si el password es correcto o no
+                $auth = password_verify($password, $usuario['password']);
+
+                if ($auth) {
+                    // el usuario está autenticado
+                    session_start();
+
+                    // Llenar el arreglo de la sesión
+                    $_SESSION['usuario'] = $usuario['email'];
+                    $_SESSION['login'] = true;
+
+
+                } else {
+                    $errores[] = 'La contraseña es incorrecta';
+                }
             } else {
                 $errores[] = "El usuario no existe";
             }
